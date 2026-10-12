@@ -1,0 +1,36 @@
+{
+  "name": "@red-cup-engineering/web-release-candidate-service",
+  "version": "0.3.0",
+  "description": "Deterministic web artifact release manifests, verification, and profile parity.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/web-release-candidate.mjs"
+    },
+    "./observe-public-release": {
+      "import": "./src/observe-public-release.mjs"
+    }
+  },
+  "bin": {
+    "verify-web-release-directory": "./scripts/verify-web-release-directory.mjs",
+    "observe-public-release": "./scripts/observe-public-release.mjs"
+  },
+  "files": [
+    "src",
+    "scripts",
+    "README.md"
+  ],
+  "scripts": {
+    "check": "node --check src/web-release-candidate.mjs && node --check src/verify-web-release-directory.mjs && node --check src/observe-public-release.mjs && node --check scripts/verify-web-release-directory.mjs && node --check scripts/observe-public-release.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@red-cup-engineering/javascript-node-services-section": "workspace:*",
+    "@red-cup-engineering/json-services-section": "workspace:*",
+    "@red-cup-engineering/uri-services-section": "workspace:*"
+  }
+}

@@ -4,8 +4,7 @@
   "description": "Deterministic web artifact release manifests, verification, and profile parity.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/computer-systems-engineering-services-section.git",
-    "directory": "services/computer-systems-publishing-engineering-services-section/services/web-release-candidate-service"
+    "url": "git+https://github.com/red-cup-engineering/web-release-candidate-service.git"
   },
   "type": "module",
   "exports": {
